@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Quad.Trivia.ApiService/Quad.Trivia.ApiService.csproj" />
+  <Project Path="Quad.Trivia.AppHost/Quad.Trivia.AppHost.csproj" />
+  <Project Path="Quad.Trivia.ServiceDefaults/Quad.Trivia.ServiceDefaults.csproj" />
+  <Project Path="Quad.Trivia.Tests/Quad.Trivia.Tests.csproj" />
+  <Project Path="Quad.Trivia.Web/Quad.Trivia.Web.csproj" />
+</Solution>
