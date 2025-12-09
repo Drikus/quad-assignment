@@ -4,24 +4,26 @@ namespace Quad.Trivia.ApiService.Endpoints
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Routing;
     using Quad.Trivia.ApiService;
-    using Quad.Trivia.ApiService.Models;
+    using Quad.Trivia.ApiService.Extensions;
     using System;
     using System.IO;
     using System.Threading;
-    using System.Threading.Tasks;
 
     public static class TriviaEndpoints
     {
         public static WebApplication MapTriviaEndpoints(this WebApplication app)
         {
             app.MapGet("/questions", async (ITriviaService triviaService, CancellationToken cancellationToken) =>
-                await triviaService.GetNewTriviaQuestionAsync(cancellationToken))
-                .WithName("GetQuestion");
+            {
+                var question = await triviaService.GetNewTriviaQuestionAsync(cancellationToken);
+                return Results.Ok(question.ToDTO());
+            })
+            .WithName("GetQuestion");
 
             app.MapGet("/questions/{questionId:guid}", async (Guid questionId, ITriviaService triviaService, CancellationToken cancellationToken) =>
             {
                 var question = await triviaService.GetTriviaQuestionAsync(questionId, cancellationToken);
-                return question is null ? Results.NotFound() : Results.Ok(question);
+                return Results.Ok(question.ToDTO());
             })
             .WithName("GetQuestionById");
 
