@@ -4,7 +4,7 @@
     {
         public Guid QuestionId { get; set; }
 
-        public string QuestionDescription { get; set; }
+        public string Question { get; set; }
 
         public string Category { get; set; }
 

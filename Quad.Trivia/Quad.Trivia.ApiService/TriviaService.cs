@@ -20,7 +20,7 @@ namespace Quad.Trivia.ApiService
             var questionModel = new QuestionModel
             {
                 QuestionId = Guid.NewGuid(),
-                QuestionDescription = openTriviaResult.Question ?? "No question available",
+                Question = openTriviaResult.Question ?? "No question available",
                 Category = openTriviaResult.Category ?? "Unknown",
                 Difficulty = openTriviaResult.Difficulty switch
                 {
