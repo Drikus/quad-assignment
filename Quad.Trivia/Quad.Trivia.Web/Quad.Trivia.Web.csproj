@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Quad.Trivia.ApiService.DTOs\Quad.Trivia.ApiService.DTOs.csproj" />
     <ProjectReference Include="..\Quad.Trivia.ServiceDefaults\Quad.Trivia.ServiceDefaults.csproj" />
   </ItemGroup>
 
