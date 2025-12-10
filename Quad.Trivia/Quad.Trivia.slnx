@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Quad.Trivia.ApiService.DTOs/Quad.Trivia.ApiService.DTOs.csproj" Id="4e783401-a749-4734-89e3-351c48a13dd7" />
   <Project Path="Quad.Trivia.ApiService/Quad.Trivia.ApiService.csproj" />
   <Project Path="Quad.Trivia.AppHost/Quad.Trivia.AppHost.csproj" />
   <Project Path="Quad.Trivia.ServiceDefaults/Quad.Trivia.ServiceDefaults.csproj" />
