@@ -42,7 +42,7 @@ namespace Quad.Trivia.ApiService.Endpoints
                 }
 
                 var isCorrect = await triviaService.CheckAnswerAsync(questionId, userAnswer.Trim(), cancellationToken);
-                return Results.Ok(new { Correct = isCorrect });
+                return Results.Ok(isCorrect);
             })
             .WithName("CheckAnswer");
 
